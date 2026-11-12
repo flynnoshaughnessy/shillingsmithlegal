@@ -39,7 +39,7 @@ Then open http://localhost:8000.
 - **Colors and fonts:** set as CSS custom properties at the top of `assets/css/styles.css`. Headings use *Newsreader* and body text uses *Public Sans*, both from Google Fonts.
 - **Header and footer:** each page carries its own copy of the header and footer. Changes to the navigation, phone, address, or footer must be made in all 10 HTML files (a find-and-replace across `*.html` handles this).
 - **Navigation:** the Practice Areas item opens a dropdown listing each practice page. It opens on hover or with the chevron button on desktop, and with the chevron button in the mobile menu.
-- **Practice-area copy:** each practice page has a short introduction, a checkmarked "How We Can Help" list, and a consultation call to action.
+- **Practice-area pages** follow the v2 practice-area template: a full-width photo hero with the practice name, a navy panel of checkmarked services beside an ivory panel with an italic headline, short description, and consultation button, a sketched landscape divider, and a navy "Trusted … Counsel in New York" strip.
 
 ## Before launch: items to confirm with the firm
 
@@ -52,6 +52,7 @@ Then open http://localhost:8000.
 **Imagery**
 - [ ] Confirm the licensing or ownership of all imagery in `assets/img/` before launch:
   - `practice-real-estate.jpg`, `practice-land-use.jpg`, `practice-estate.jpg`, `practice-corporate.jpg`, `practice-litigation.jpg`: practice-page hero images supplied by the project team (autumn Carmel home, fenced Hudson Valley meadow, lakeside overlook, Main Street storefronts, historic courthouse). If they are AI-generated, check that the generator's terms permit commercial use and that they don't depict identifiable real properties in a misleading way.
+  - `landscape-sketch.webp`: the sketched landscape divider on the practice pages, extracted from the v2 template image and upscaled.
   - `landscape-day.jpg`, `landscape-dusk.jpg`, `band-oak.jpg`, `band-ridge.jpg`: placeholders **cropped from the AI-generated design mockups** (used on Home, About, Attorneys, and the navy bands). Replace them with supplied imagery in the same style, at about 1600px wide.
 
 **Contact form**
