@@ -64,6 +64,7 @@ Then open http://localhost:8000.
 - [ ] Add a privacy policy if the firm requires one, especially once a form handler is connected.
 
 **Technical**
+- [ ] **At launch, remove the `<meta name="robots" content="noindex, nofollow">` tag from every HTML page.** It keeps search engines from indexing the draft site while it is under review.
 - [ ] The Contact page embeds Google Maps by address. Confirm the pin location.
 - [ ] Add analytics, if wanted, and set the canonical domain, a sitemap, and social preview images once hosting is chosen.
 
