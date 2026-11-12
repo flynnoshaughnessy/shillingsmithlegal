@@ -38,6 +38,7 @@ Then open http://localhost:8000.
 
 - **Colors and fonts:** set as CSS custom properties at the top of `assets/css/styles.css`. Headings use *Newsreader* and body text uses *Public Sans*, both from Google Fonts.
 - **Header and footer:** each page carries its own copy of the header and footer. Changes to the navigation, phone, address, or footer must be made in all 10 HTML files (a find-and-replace across `*.html` handles this).
+- **Navigation:** the Practice Areas item opens a dropdown listing each practice page. It opens on hover or with the chevron button on desktop, and with the chevron button in the mobile menu.
 - **Practice-area copy:** each practice page has a short introduction, a checkmarked "How We Can Help" list, and a consultation call to action.
 
 ## Before launch: items to confirm with the firm
@@ -49,7 +50,10 @@ Then open http://localhost:8000.
 - [ ] **Attorneys page:** replace the four placeholder cards in `attorneys.html` with verified names, titles, photos, and biographies, and add or remove cards to match the team.
 
 **Imagery**
-- [ ] Every photo in `assets/img/` (`landscape-day.jpg`, `landscape-dusk.jpg`, `band-oak.jpg`, `band-ridge.jpg`) is a placeholder **cropped from the AI-generated design mockups**. Replace each with licensed or firm-owned photography at higher resolution (about 1600px wide for heroes) before launch.
+- [ ] Every photo in `assets/img/` is a placeholder **cropped from the AI-generated design mockups** in the handoff document:
+  - `landscape-day.jpg`, `landscape-dusk.jpg`, `band-oak.jpg`, `band-ridge.jpg`: landscapes used on Home, About, Attorneys, and the navy bands.
+  - `practice-real-estate.jpg`, `practice-land-use.jpg`, `practice-estate.jpg`, `practice-corporate.jpg`, `practice-litigation.jpg`: the practice-specific hero images (home, fenced meadow, bench beneath an oak, village storefront, courthouse columns). The mockup originals were only about 200px wide, so they were AI-upscaled and look soft up close.
+  - Replace each with licensed or firm-owned photography in the same warm, golden-hour style, at about 1600px wide for heroes, before launch.
 
 **Contact form**
 - [ ] The contact form is **not connected to a server**. For now it validates the input and opens the visitor's email app with a pre-filled message to the office, and the page says so. To send submissions directly, connect a tested form handler (Formspree, Netlify Forms, or the host's own), update `contact.html` and `main.js`, and only then change the on-page wording.

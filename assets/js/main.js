@@ -30,6 +30,35 @@
     });
   }
 
+  /* ---- Practice Areas dropdown ----
+     Desktop opens on hover (CSS) or via the chevron button; mobile uses the button only. */
+  document.querySelectorAll(".has-sub").forEach(function (item) {
+    var btn = item.querySelector(".sub-toggle");
+    var menu = item.querySelector(".sub-menu");
+    if (!btn || !menu) return;
+    var setSub = function (open) {
+      btn.setAttribute("aria-expanded", String(open));
+      item.classList.toggle("is-open", open);
+    };
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      setSub(btn.getAttribute("aria-expanded") !== "true");
+    });
+    item.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && btn.getAttribute("aria-expanded") === "true") {
+        e.stopPropagation();
+        setSub(false);
+        btn.focus();
+      }
+    });
+    item.addEventListener("focusout", function (e) {
+      if (window.matchMedia("(min-width: 901px)").matches && !item.contains(e.relatedTarget)) setSub(false);
+    });
+    document.addEventListener("click", function (e) {
+      if (!item.contains(e.target) && window.matchMedia("(min-width: 901px)").matches) setSub(false);
+    });
+  });
+
   /* ---- Header shadow on scroll ---- */
   var header = document.querySelector(".site-header");
   if (header) {
